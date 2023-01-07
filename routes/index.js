@@ -7,6 +7,10 @@ mongoose.connect(dbUrl);
 
 console.log("Mongo is connected");
 
+router.get("/", async(req, res) => {
+  res.send("Welcome to ZenDesk App");
+})
+
 router.get("/issue-types", async (req, res) => {
   try {
     let issues_types = await issueTypeModel.find({}, {'issue_type': 1, '_id': 0}); 
@@ -201,7 +205,6 @@ router.put("/change-status/:id", async (req, res) => {
     });
   }
 });
-
 
 
 module.exports = router;
