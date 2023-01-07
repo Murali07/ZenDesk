@@ -12,3 +12,35 @@
     width: 450px;
 }
 
+.success-wrapper{
+    text-align: center;
+    background-color:#99ff99;
+    margin: auto;
+    width: 500px;
+    margin-top: 20px;
+    padding-bottom: 5px;
+}
+
+.copy{
+    cursor: pointer;
+}
+
+.wrapper-status{
+    margin-top: 10px;
+}
+
+.dashboard-wrapper{
+    margin-top: 20px;
+}
+
+.head-wrapper{
+    display: grid;
+    grid-template-columns: 300px 300px 300px;
+    grid-gap: 20px;
+    place-content: center;
+}
+
+.cards{
+    width: 18rem;    
+}
+
