@@ -59,10 +59,10 @@ function Dashboard() {
       
       <div className="main-wrapper">
         {
-            stage !== "" ? <h1>List of {stage} Issues</h1> : <></>
+            stage !== "" ? <h1 className="heading">List of {stage} Issues</h1> : <></>
         }
         {
-            data.length ? <Table striped bordered hover>
+            data.length ? <Table bordered hover>
             <thead>
               <tr>
                 <th>#</th>
@@ -79,13 +79,13 @@ function Dashboard() {
                     data.map((e, i) => {
                         return <tr key={i} style={{"cursor":"pointer"}} onClick={()=>{navigate(`/issue/${e._id}`)}} >
                             
-                                <td>{i+1}</td>
-                                <td> {e.issueTitle} </td>
-                                <td> {e.issueType} </td>
-                                <td> {e.createdAt} </td>
-                                <td> {e.name} </td> 
-                                <td> {e.mobile} </td>
-                                <td> {e.email} </td>
+                                <td data-label="#"> {i+1} </td>
+                                <td data-label="Issue Title"> {e.issueTitle} </td>
+                                <td data-label="Issue Type"> {e.issueType} </td>
+                                <td data-label="Created Date"> {e.createdAt} </td>
+                                <td data-label="Name"> {e.name} </td> 
+                                <td data-label="Mobile"> {e.mobile} </td>
+                                <td data-label="Email"> {e.email} </td>
                             
                         </tr>
                     })

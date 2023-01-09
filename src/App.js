@@ -8,6 +8,7 @@ import Dashboard from "./components/Dashboard";
 import Issues from "./components/Issues";
 import Navbar from "./helpers/Navbar";
 import Contact from "./components/Contact";
+import Home from "./components/Home";
 export const CommonContext = React.createContext();
 
 const apiurl = "http://localhost:8010";
@@ -19,6 +20,7 @@ function App() {
         <CommonContext.Provider value={{ apiurl }}>
           <Navbar />
           <Routes>
+            <Route path="/" element={<Home/>} />
             <Route path="/new-issue" element={<ZenForm />} />
             <Route path="/success/:id" element={<Success />} />
             <Route path="/track-issue" element={<Status />} />
