@@ -1,5 +1,4 @@
 import React from "react";
-import { MDBInput, MDBCheckbox, MDBBtn, MDBTextArea } from "mdb-react-ui-kit";
 
 function Contact() {
   return (
