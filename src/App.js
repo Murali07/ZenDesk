@@ -11,7 +11,7 @@ import Contact from "./components/Contact";
 import Home from "./components/Home";
 export const CommonContext = React.createContext();
 
-const apiurl = "http://localhost:8010";
+const apiurl = "https://zendesk.onrender.com";
 
 function App() {
   return (
